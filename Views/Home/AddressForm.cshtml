@@ -1,0 +1,31 @@
+﻿@model Test.ViewModel.AddressVM;
+@{
+}
+
+<div>
+    <h2 class="text-center">Enter Customer Address Details</h2>
+    <form action="/CustomerAddress/AddAddress" method="post">
+        <div class="mb-3">
+            <label class="mb-2">Address</label>
+            <input type="text" class="address form-control" id="address" asp-for="Address" />
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2">State</label>
+            <input type="text" class="state form-control" id="state" asp-for="state" />
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2">City</label>
+            <input type="text" class="city form-control" id="city" asp-for="city" />
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2">Country</label>
+            <input type="text" class="country form-control mb-3" id="country" asp-for="country" />
+        </div>
+
+        <input type="hidden" asp-for="CustomerId" asp-items="@ViewBag.CustomerId" />
+        <button type="submit" class="btn btn-primary" style="float: right;">Submit</button>
+    </form>
+</div>

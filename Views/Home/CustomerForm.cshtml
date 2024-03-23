@@ -1,0 +1,42 @@
+﻿@model Test.ViewModel.CustomerVM;
+
+<div>
+    <h2 class="text-center">Enter Customer Details</h2>
+    <form action="/CustomerAddress/AddCustomer" method="post">
+        <div class="mb-3">
+            <label class="mb-2"> Customer Name</label>
+            <input type="text" class="name form-control" id="name" asp-for="Name" placeholder="customer name" />
+        </div>
+        <div class="mb-3">
+            <label class="mb-2"> Customer Email</label>
+            <input type="email" class="email form-control" id="email" asp-for="Email" placeholder="demo@gmail.com" />
+        </div>
+        <div class="mb-3">
+            <label class="mb-2"> Customer DOB</label>
+            <input type="date" class="DOB form-control" id="DOB" asp-for="DOB" />
+        </div>
+        <div class="mb-3">
+            <label class="mb-2">Gender :</label>
+            <div class="container">
+                <div>                
+                    <input type="radio" name="gender" id="gender" value="Male" checked asp-for="gender">
+                    <label>Male</label>
+                </div>
+                <div>                
+                    <input type="radio" name="gender" id="gender" value="Female" asp-for="gender">
+                    <label>Female</label>
+                </div>
+                <div>                
+                    <input type="radio" name="gender" id="gender" value="Not Selected" asp-for="gender">
+                    <label>Not Need to Select</label>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" asp-for="Id" />
+
+        <div>
+            <button type="submit" class="btn btn-primary" style="float: right;">Submit</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+﻿@model Test.Data.AddressTable;
+@{
+}
+
+<div>
+    <h2 class="text-center">Edit Customer Address Details</h2>
+    <form action="/CustomerAddress/EditAddressDetails" method="post">
+        <input class="EditCustId" value="@Model.Id" type="hidden" asp-for="Id" />
+        <div class="mb-3">
+            <label class="mb-2">Address</label>
+            <input type="text" class="address form-control" id="address" asp-for="Address" value="@Model.Address" />
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2">State</label>
+            <input type="text" class="state form-control" id="state" asp-for="state" value="@Model.state" />
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2">City</label>
+            <input type="text" class="city form-control" id="city" asp-for="city" value="@Model.city" />
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-2">Country</label>
+            <input type="text" class="country form-control mb-3" id="country" asp-for="country" value="@Model.country" />
+        </div>
+
+        <input type="hidden" asp-for="CustomerId" asp-items="@ViewBag.CustomerId" />
+        <button type="submit" class="btn btn-primary" style="float: right;">Submit</button>
+    </form>
+</div>
