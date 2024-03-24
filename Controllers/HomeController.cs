@@ -16,7 +16,7 @@ namespace Test.Controllers
 
         public IActionResult Index()
         {
-            return RedirectToAction( "CustomerList", "CustomerAddress");
+            return RedirectToAction( "index", "CustomerAddress");
         }
 
 

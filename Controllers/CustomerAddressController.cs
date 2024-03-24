@@ -56,10 +56,7 @@ namespace Test.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-
-        [HttpGet]
-        [ActionName("CustomerList")]
-        public IActionResult CustomerList()
+        public IActionResult index()
         {
             var CustomerDetails = TestDbContext.Customer.Include(c => c.Addresses).ToList();
             return View(CustomerDetails);
