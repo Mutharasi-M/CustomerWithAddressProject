@@ -1,0 +1,6 @@
+defaults:
+  - scope:
+      path: "" # all files in the repo
+      type: "source"
+    values:
+      index: "index.cshtml"
